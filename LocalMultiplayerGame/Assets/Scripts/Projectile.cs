@@ -19,6 +19,11 @@ public class Projectile : MonoBehaviour
         ownerID = id;
     }
 
+    public int getOwnerID()
+    {
+        return ownerID;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {

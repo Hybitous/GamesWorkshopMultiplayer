@@ -138,3 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c73cee48eec6b0419911dc4b2e23eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scanAngle: 57.13
+  scanDistance: 80.8
+  maxCorrection: 4
+  step: 1
+  looseFocusAt: 1
