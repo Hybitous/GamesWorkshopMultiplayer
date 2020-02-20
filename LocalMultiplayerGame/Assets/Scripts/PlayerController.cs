@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed;
     Vector2 move;
     [SerializeField] float RotationSmoothness;
+    PlayerInput playerInput;
+    bool hold = false;
     
 
     float angle;
@@ -19,12 +21,16 @@ public class PlayerController : MonoBehaviour
     {
         playerManager = FindObjectOfType<PlayerManager>();
         playerManager.addPlayer(this.gameObject);
+        playerInput = GetComponent<PlayerInput>();
     }
 
     private void Move()
     {
-        Vector3 movement = new Vector3(move.x, 0 , move.y);
-        transform.Translate(movement * speed * Time.deltaTime, Space.World);
+        if (!hold)
+        {
+            Vector3 movement = new Vector3(move.x, 0, move.y);
+            transform.Translate(movement * speed * Time.deltaTime, Space.World);
+        }
     }
 
     // Update is called once per frame
@@ -50,6 +56,12 @@ public class PlayerController : MonoBehaviour
         if (move.sqrMagnitude > 0.1f) {
             angle = Mathf.Atan2(move.x, move.y) * Mathf.Rad2Deg;
         }
+    }
+
+    void OnHold(InputValue value)
+    {
+     
+        hold = value.isPressed;
     }
 
     

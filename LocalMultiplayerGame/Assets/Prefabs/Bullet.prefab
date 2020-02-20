@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  speed: 1
+  speed: 0.6
 --- !u!54 &-6275902738455948203
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -138,8 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c73cee48eec6b0419911dc4b2e23eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scanAngle: 57.13
-  scanDistance: 80.8
+  scanAngle: 25
+  scanDistance: 74.52
   maxCorrection: 4
   step: 1
   looseFocusAt: 1

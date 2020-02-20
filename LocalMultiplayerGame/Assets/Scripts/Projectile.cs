@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 10);
+        Destroy(gameObject, 3);
     }
 
     public void setOwnerID(int id)

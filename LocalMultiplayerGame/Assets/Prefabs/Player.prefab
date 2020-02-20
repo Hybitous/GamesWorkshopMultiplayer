@@ -266,7 +266,23 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: feb52df3-f9fa-4545-9e2a-011b13693cfe
+    m_ActionName: Gameplay/Move[/Nintendo Wireless Gamepad/hat,/Nintendo Wireless
+      Gamepad/hat,/Keyboard/w,/Keyboard/a,/Keyboard/d,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ae7a379d-c2ec-4b44-bdb7-ad4cf558fb7e
+    m_ActionName: Gameplay/Attack[/Nintendo Wireless Gamepad/button3,/Nintendo Wireless
+      Gamepad/button3,/Nintendo Wireless Gamepad/button4,/Nintendo Wireless Gamepad/button4,/Nintendo
+      Wireless Gamepad/button2,/Nintendo Wireless Gamepad/button2,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a188d7db-2671-47ff-af1c-dd8d22cb121a
+    m_ActionName: Gameplay/Hold[/Nintendo Wireless Gamepad/button6,/Nintendo Wireless
+      Gamepad/button6,/Nintendo Wireless Gamepad/button5,/Nintendo Wireless Gamepad/button5,/Keyboard/ctrl]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

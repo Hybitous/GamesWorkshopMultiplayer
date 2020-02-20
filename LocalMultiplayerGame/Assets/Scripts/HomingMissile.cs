@@ -41,7 +41,7 @@ public class HomingMissile : MonoBehaviour
     {
         if (nearestPlayer != null)
         {
-            return;
+            //return;
         }
         float angle = 0;
         while(angle <= scanAngle)
@@ -55,8 +55,11 @@ public class HomingMissile : MonoBehaviour
                 {
                     if (!hit.transform.GetComponent<PlayerWeapon>().isOwner(GetComponent<Projectile>().getOwnerID()))
                     {
-                        nearestPlayer = hit.transform;
-                        return;
+                        if (nearestPlayer == null)
+                        {
+                            nearestPlayer = hit.transform;
+                            return;
+                        }
                     }
                 }
                
@@ -71,5 +74,6 @@ public class HomingMissile : MonoBehaviour
                 angle = (-1* Mathf.Abs(angle) - step);
             }
         }
+        nearestPlayer = null;
     }
 }
