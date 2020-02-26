@@ -345,3 +345,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3375349042972901065, guid: c746730149ed97540b3071447ec94b8f, type: 3}
+  boomerang: {fileID: 7508773416447953084, guid: 7955d5ad1ac73914e85f5f8c1c77efaa,
+    type: 3}
+  weaponMode: 0
