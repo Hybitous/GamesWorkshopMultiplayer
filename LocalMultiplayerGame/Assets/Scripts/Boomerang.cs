@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boomerang : MonoBehaviour
+public class Boomerang : Projectile
 {
 
     [SerializeField] int damage;
@@ -16,7 +16,7 @@ public class Boomerang : MonoBehaviour
     private bool returning = false;
     private bool hovering = false;
     private List<int> resistantPlayers = new List<int>();
-    private int ownerID;
+
 
     private void Awake()
     {
@@ -48,7 +48,7 @@ public class Boomerang : MonoBehaviour
         {
             if (player.GetComponent<PlayerHealth>() != null && ! resistantPlayers.Contains(player.GetComponent<PlayerWeapon>().getIndex()))
             {
-                if (! (player.GetComponent<PlayerWeapon>().isOwner(ownerID) && Time.time - startTime < initialResistanceTime))
+                if (! (player.GetComponent<PlayerWeapon>().isOwner(getOwnerID()) && Time.time - startTime < initialResistanceTime))
                 {
                     player.GetComponent<PlayerHealth>().dealDamage(damage);
                     resistantPlayers.Add(player.GetComponent<PlayerWeapon>().getIndex());
@@ -73,9 +73,6 @@ public class Boomerang : MonoBehaviour
         resistantPlayers.RemoveAt(0);
     }
 
-    public void setOwnerID(int id)
-    {
-        ownerID = id;
-    }
+
 
 }

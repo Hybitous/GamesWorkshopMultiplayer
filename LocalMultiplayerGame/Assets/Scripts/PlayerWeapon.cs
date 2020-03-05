@@ -6,24 +6,38 @@ using UnityEngine.InputSystem;
 public class PlayerWeapon : MonoBehaviour
 {
     AbstractWeapon currentWeapon;
-    [SerializeField] GameObject weaponPrefab;
+    [SerializeField] AbstractWeapon defaultWeapon;
     PlayerInput playerInput;
     [SerializeField] Transform weaponsHand;
 
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
-        weaponPickup();
+        SwitchWeapon(defaultWeapon);
     }
 
-    void weaponPickup()
+    void SwitchWeapon(AbstractWeapon weapon)
     {
-        var weaponGo = Instantiate(weaponPrefab, weaponsHand);
+        var weaponGo = Instantiate(weapon, weaponsHand);
         currentWeapon = weaponGo.GetComponent<AbstractWeapon>();
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        WeaponPickUp weaponPickUp = other.gameObject.GetComponent<WeaponPickUp>();
+        if (weaponPickUp != null)
+        {
+            SwitchWeapon(weaponPickUp.getWeapon());
+        }
+    }
+
+
     void OnAttack()
     {
+        if (currentWeapon != null)
+        {
         currentWeapon.Attack();
+        }
    
     }
 

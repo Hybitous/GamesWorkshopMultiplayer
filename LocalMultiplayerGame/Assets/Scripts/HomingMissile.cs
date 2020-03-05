@@ -9,8 +9,9 @@ public class HomingMissile : MonoBehaviour
     [SerializeField] float scanAngle;
     [SerializeField] float scanDistance;
     [SerializeField] float maxCorrection;
-    [SerializeField] float step = 0.25f;
+    [SerializeField] float step;
     [SerializeField] float looseFocusAt = 1.3f;
+    [SerializeField] float speed;
 
     private void Update()
     {
@@ -21,6 +22,7 @@ public class HomingMissile : MonoBehaviour
     {
         
         CorrectTrajectory();
+        transform.Translate(Vector3.forward * speed);
     }
 
     void CorrectTrajectory()

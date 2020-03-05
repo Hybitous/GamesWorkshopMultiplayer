@@ -375,6 +375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552c2309fda8fe046a4b8c387c2d8db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 3924719763077295963, guid: fe62bddf1ccb2a749945751146e754f9,
+  defaultWeapon: {fileID: 4121248394422398236, guid: fe62bddf1ccb2a749945751146e754f9,
     type: 3}
   weaponsHand: {fileID: 7095435356028395795}
