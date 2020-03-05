@@ -66,6 +66,15 @@ public class PlayerController : MonoBehaviour
 
     
 
+    public bool isOwner(int id)
+    {
+        return id == playerInput.playerIndex;
+    }
 
-    
+    public int Index => playerInput.playerIndex;
+
+
+
+
+
 }
