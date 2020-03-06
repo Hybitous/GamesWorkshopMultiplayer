@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnHold(InputValue value)
+    void OnHoldPosition(InputValue value)
     {
      
         hold = value.isPressed;

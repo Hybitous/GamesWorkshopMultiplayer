@@ -22,8 +22,8 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Hold",
-                    "type": "Button",
+                    "name": "HoldPosition",
+                    "type": "PassThrough",
                     "id": "a188d7db-2671-47ff-af1c-dd8d22cb121a",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -159,7 +159,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Hold",
+                    "action": "HoldPosition",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -170,7 +170,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Hold",
+                    "action": "HoldPosition",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -181,7 +181,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Hold",
+                    "action": "HoldPosition",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
